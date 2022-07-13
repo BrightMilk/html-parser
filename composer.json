@@ -1,0 +1,16 @@
+{
+    "name": "brightmilk/html-parser",
+    "description": "HTML Parser",
+    "autoload": {
+        "psr-4": {
+            "Brightmilk\\HtmlParser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Medyanik",
+            "email": "amedyanik.dev@gmail.com"
+        }
+    ],
+    "require": {}
+}
