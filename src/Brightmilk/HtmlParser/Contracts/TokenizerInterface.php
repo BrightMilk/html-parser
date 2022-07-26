@@ -3,12 +3,14 @@
 namespace Brightmilk\HtmlParser\Contracts;
 
 
+use Brightmilk\HtmlParser\TokenList;
+
 interface TokenizerInterface
 {
     /**
      * Получение токенов.
      *
-     * @return void
+     * @return TokenList
      */
-    public function tokenize(): void;
+    public function getTokens(): TokenList;
 }

@@ -23,7 +23,7 @@ class HtmlTokenizer implements ITokenizer
     }
 
     /**
-     * @return TokenList
+     * @inheritDoc
      */
     public function getTokens(): TokenList
     {
@@ -39,7 +39,7 @@ class HtmlTokenizer implements ITokenizer
      *
      * @return void
      */
-    public function tokenize(): void
+    private function tokenize(): void
     {
         $matches = [];
 
