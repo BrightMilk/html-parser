@@ -3,7 +3,7 @@
     "description": "HTML Parser",
     "autoload": {
         "psr-4": {
-            "Brightmilk\\HtmlParser\\": "src/"
+            "Brightmilk\\HtmlParser\\": "src/Brightmilk/HtmlParser"
         }
     },
     "authors": [
@@ -12,5 +12,7 @@
             "email": "amedyanik.dev@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "pear/console_table": "^1.3"
+    }
 }

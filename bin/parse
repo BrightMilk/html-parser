@@ -1,0 +1,29 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/pear/console_table/Table.php';
+
+if (empty($argv[1])) {
+    die("Usage: $argv[0] <URL>" . PHP_EOL);
+}
+
+$url = $argv[1];
+
+$text = @file_get_contents($url);
+
+$tokenizer = new Brightmilk\HtmlParser\HtmlTokenizer($text);
+$tokens = $tokenizer->getTokens();
+
+$tagCounter = new Brightmilk\HtmlParser\HtmlTagCounter($tokens);
+$counts = $tagCounter->getCounts();
+
+$tbl = new Console_Table();
+$tbl->setHeaders(
+    array('Tag', 'Count')
+);
+
+foreach ($counts as $tag=>$count) {
+    $tbl->addRow([$tag, $count]);
+}
+
+echo $tbl->getTable();
